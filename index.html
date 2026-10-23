@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tamizharuvi Maniyan Annamalai — Lead Naval Architect</title>
+<meta name="description" content="Lead Naval Architect / Assistant Manager — Marine Technology, Cybermarine Ltd, London. Vessel modification engineering, hydrodynamic consultancy, stability and class-approval-led delivery.">
+<meta name="theme-color" content="#0B1520">
+<meta property="og:title" content="Tamizharuvi Maniyan Annamalai — Lead Naval Architect">
+<meta property="og:description" content="Vessel modification engineering, hydrodynamic consultancy and stability. Based in London.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.hiaruvi.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230B1520'/%3E%3Cpath d='M12 38h40l-5 10H17z' fill='none' stroke='%23F7F7F4' stroke-width='3'/%3E%3Cpath d='M8 42h48' stroke='%236FA8DC' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F7F7F4;
+  --paper-2:#EFF0EB;
+  --ink:#0B1520;
+  --ink-2:#36424E;
+  --ink-3:#5B6772;
+  --line:#D9DCD5;
+  --line-2:#C4C8C0;
+  --accent:#0B4F8A;
+  --accent-ink:#083D6B;
+  --accent-soft:#E4ECF4;
+  --night:#0B1520;
+  --night-2:#13212F;
+  --night-text:#E9ECEF;
+  --night-muted:#9DA9B5;
+  --sea:#6FA8DC;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  --maxw:1200px;
+  --pad:clamp(16px,4vw,48px);
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+::selection{background:var(--accent);color:#fff}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
+.mono{font-family:var(--mono)}
+.label{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:16px;top:16px;z-index:100;background:var(--ink);color:#fff;padding:10px 14px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* ---------- Nav ---------- */
+.nav{position:sticky;top:0;z-index:50;background:rgba(247,247,244,.86);backdrop-filter:saturate(150%) blur(12px);-webkit-backdrop-filter:saturate(150%) blur(12px);border-bottom:1px solid transparent;transition:border-color .3s var(--ease)}
+.nav.scrolled{border-bottom-color:var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:600;font-size:16px;letter-spacing:-.01em}
+.brand-mark{width:30px;height:30px;border:1.5px solid var(--ink);display:grid;place-items:center;font-family:var(--mono);font-size:12px;font-weight:500}
+.brand small{display:block;font-weight:400;font-size:12px;color:var(--ink-3);letter-spacing:0}
+.nav-links{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-size:14px}
+.nav-links a{text-decoration:none;color:var(--ink-2);padding:6px 0;border-bottom:1.5px solid transparent;transition:color .2s,border-color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a.active{color:var(--ink);border-bottom-color:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 20px;font:500 14px/1 var(--sans);text-decoration:none;border:1.5px solid var(--ink);color:var(--ink);background:transparent;transition:background .2s,color .2s,border-color .2s;cursor:pointer}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn.solid{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.solid:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+.btn svg{width:16px;height:16px}
+@media (max-width:900px){.nav-links{display:none}}
+.nav .sm{display:none}.brand{white-space:nowrap}
+@media (max-width:560px){.brand small{display:none}.nav .lg{display:none}.nav .sm{display:inline}.nav .btn{padding:0 14px}}
+.contact-grid a{font-size:16px}
+
+/* ---------- Hero ---------- */
+.hero{padding:clamp(56px,9vw,112px) 0 0}
+.hero-top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.status{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.status i{width:8px;height:8px;border-radius:50%;background:#2E8B57;box-shadow:0 0 0 4px rgba(46,139,87,.15)}
+.hero h1{margin:clamp(40px,6vw,72px) 0 0;font-weight:500;font-size:clamp(42px,7.2vw,96px);line-height:1.02;letter-spacing:-.035em;max-width:14ch}
+.hero h1 span{color:var(--ink-3);font-weight:300}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(32px,6vw,80px);margin-top:clamp(32px,4vw,48px);align-items:end}
+.hero-lede{margin:0;font-size:clamp(18px,1.6vw,21px);line-height:1.55;color:var(--ink-2);max-width:56ch}
+.hero-role{font-weight:500;color:var(--ink)}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+@media (max-width:820px){.hero-grid{grid-template-columns:1fr}.hero-actions{justify-content:flex-start}}
+
+/* drawing */
+.drawing{margin-top:clamp(48px,7vw,88px);border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:
+  linear-gradient(var(--paper),var(--paper)) padding-box,
+  repeating-linear-gradient(90deg,transparent 0 39px,rgba(11,21,32,.035) 39px 40px)}
+.drawing-inner{position:relative;padding:28px 0 18px}
+.drawing svg{width:100%;height:auto;overflow:visible}
+.drawing .cap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:8px}
+.d-line{fill:none;stroke:var(--ink);stroke-width:1.4;stroke-linejoin:round;stroke-linecap:round}
+.d-thin{fill:none;stroke:var(--ink);stroke-width:.8;opacity:.55}
+.d-wl{stroke:var(--accent);stroke-width:1.2;stroke-dasharray:10 6;fill:none}
+.d-dim{stroke:var(--ink-3);stroke-width:.8;fill:none}
+.d-text{font-family:var(--mono);font-size:11px;fill:var(--ink-3);letter-spacing:.06em}
+.d-text.acc{fill:var(--accent)}
+.draw{stroke-dasharray:var(--len,2400);stroke-dashoffset:var(--len,2400);animation:draw 2.4s var(--ease) forwards}
+.draw.d2{animation-delay:.5s}.draw.d3{animation-delay:1s}
+.fade{opacity:0;animation:fadein .8s var(--ease) 1.6s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fadein{to{opacity:1}}
+
+/* ---------- Figures ---------- */
+.figures{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-bottom:1px solid var(--line)}
+.fig{padding:32px 24px 32px 0;border-right:1px solid var(--line)}
+.fig + .fig{padding-left:24px}
+.fig:last-child{border-right:0}
+.fig b{display:block;font-weight:500;font-size:clamp(34px,4vw,48px);letter-spacing:-.03em;line-height:1}
+.fig span{display:block;margin-top:10px;font-size:14px;color:var(--ink-3)}
+@media (max-width:720px){.figures{grid-template-columns:repeat(2,minmax(0,1fr))}.fig:nth-child(2){border-right:0}.fig:nth-child(3){padding-left:0}.fig:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+
+/* ---------- Sections ---------- */
+section.block{padding:clamp(80px,10vw,128px) 0}
+.sec-head{display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px 48px;margin-bottom:clamp(40px,5vw,64px)}
+.sec-num{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);padding-top:12px;border-top:1.5px solid var(--accent);align-self:start}
+.sec-head h2{margin:0;font-weight:500;font-size:clamp(32px,4.4vw,52px);line-height:1.08;letter-spacing:-.03em;max-width:20ch}
+.sec-head p{margin:18px 0 0;color:var(--ink-2);max-width:62ch;font-size:18px}
+@media (max-width:820px){.sec-head{grid-template-columns:1fr}}
+
+/* about */
+.about{display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,.8fr);gap:48px}
+.about-body p{margin:0 0 20px;font-size:18px;color:var(--ink-2)}
+.about-body p:first-child{font-size:clamp(21px,2vw,25px);line-height:1.45;color:var(--ink);letter-spacing:-.01em}
+.triangle{border:1px solid var(--line);background:#fff;padding:28px;align-self:start}
+.triangle h3{margin:0 0 6px;font-size:15px;font-weight:600}
+.triangle p{margin:0 0 20px;font-size:15px;color:var(--ink-3)}
+.triangle svg text{font-family:var(--mono);font-size:11px;fill:var(--ink-2);letter-spacing:.04em}
+.clients{margin-top:12px;padding-top:24px;border-top:1px solid var(--line)}
+.clients ul{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 28px;font-weight:500;font-size:16px}
+@media (max-width:1000px){.about{grid-template-columns:1fr}.about>.spacer{display:none}}
+
+/* work */
+.work{border-top:1.5px solid var(--ink)}
+.case{border-bottom:1px solid var(--line)}
+.case summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:72px minmax(0,1.3fr) minmax(0,1fr) 140px 40px;gap:24px;align-items:center;padding:28px 0;transition:background .2s}
+.case summary::-webkit-details-marker{display:none}
+.case summary:hover h3{color:var(--accent)}
+.case .no{font-family:var(--mono);font-size:13px;color:var(--ink-3)}
+.case h3{margin:0;font-size:clamp(20px,2vw,26px);font-weight:500;letter-spacing:-.02em;line-height:1.2;transition:color .2s}
+.case .sub{font-size:15px;color:var(--ink-2)}
+.case .yr{font-family:var(--mono);font-size:12px;color:var(--ink-3);text-align:right}
+.case .tog{width:36px;height:36px;border:1px solid var(--line-2);display:grid;place-items:center;justify-self:end;transition:transform .3s var(--ease),background .2s}
+.case .tog svg{width:14px;height:14px}
+.case .tog svg{transition:transform .3s var(--ease)}
+.case[open] .tog svg{transform:rotate(45deg)}
+.case[open] .tog{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.case-body{display:grid;grid-template-columns:72px minmax(0,1.3fr) minmax(0,1fr);gap:24px;padding:0 0 40px}
+.case-body .lead{grid-column:2;margin:0 0 20px;font-size:18px;color:var(--ink)}
+.case-body ul{grid-column:2;margin:0;padding:0;list-style:none}
+.case-body li{position:relative;padding:10px 0 10px 22px;border-top:1px solid var(--line);font-size:15.5px;color:var(--ink-2)}
+.case-body li::before{content:"";position:absolute;left:0;top:21px;width:10px;height:1.5px;background:var(--accent)}
+.case-body li b{color:var(--ink);font-weight:500}
+.case-body .deliv{grid-column:2;margin:20px 0 0;padding:16px 18px;background:var(--accent-soft);font-size:15px;color:var(--ink)}
+.meta{grid-column:3;grid-row:1 / span 3;align-self:start;border:1px solid var(--line);background:#fff}
+.meta dl{margin:0}
+.meta dl div{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line);font-size:14px}
+.meta dl div:last-child{border-bottom:0}
+.meta dt{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);padding-top:2px}
+.meta dd{margin:0;color:var(--ink)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;padding:14px 16px;border-top:1px solid var(--line)}
+.tags span{font-family:var(--mono);font-size:11px;padding:4px 8px;background:var(--paper-2);color:var(--ink-2)}
+@media (max-width:900px){
+  .case summary{grid-template-columns:44px minmax(0,1fr) 36px;gap:12px 16px}
+  .case .sub,.case .yr{grid-column:2}
+  .case .sub{margin-top:-6px}
+  .case .yr{text-align:left;margin-top:-8px}
+  .case .tog{grid-column:3;grid-row:1}
+  .case-body{grid-template-columns:1fr}
+  .case-body .lead,.case-body ul,.case-body .deliv,.meta{grid-column:1;grid-row:auto}
+  .meta{margin-bottom:20px;order:-1}
+}
+.more{margin-top:48px;display:grid;grid-template-columns:200px minmax(0,1fr);gap:48px}
+.more ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px}
+.more li{padding:16px 0;border-top:1px solid var(--line);font-size:15.5px;color:var(--ink-2)}
+.more li b{display:block;color:var(--ink);font-weight:500;margin-bottom:2px}
+@media (max-width:820px){.more{grid-template-columns:1fr;gap:16px}.more ul{grid-template-columns:1fr}}
+
+/* capabilities */
+.dark{background:var(--night);color:var(--night-text)}
+.dark .sec-num{color:var(--sea);border-color:var(--sea)}
+.dark .sec-head p{color:var(--night-muted)}
+.caps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(233,236,239,.18)}
+.cap{padding:28px 24px 32px 0}
+.cap + .cap{padding-left:24px;border-left:1px solid rgba(233,236,239,.12)}
+.cap h3{margin:0 0 18px;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--sea)}
+.cap ul{margin:0;padding:0;list-style:none}
+.cap li{padding:8px 0;font-size:16px;border-bottom:1px solid rgba(233,236,239,.08)}
+@media (max-width:900px){.caps{grid-template-columns:repeat(2,minmax(0,1fr))}.cap:nth-child(3){padding-left:0;border-left:0}}
+@media (max-width:520px){.caps{grid-template-columns:1fr}.cap + .cap{padding-left:0;border-left:0;border-top:1px solid rgba(233,236,239,.12)}}
+.reg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin-top:56px}
+.reg h3{margin:0 0 14px;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--night-muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{padding:7px 12px;border:1px solid rgba(233,236,239,.22);font-size:14px}
+@media (max-width:900px){.reg{grid-template-columns:1fr}}
+
+/* experience */
+.timeline{border-top:1.5px solid var(--ink)}
+.role{display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1fr);gap:16px 48px;padding:32px 0;border-bottom:1px solid var(--line)}
+.role .when{font-family:var(--mono);font-size:13px;color:var(--ink-3);padding-top:4px}
+.role .when.now{color:var(--accent)}
+.role h3{margin:0;font-size:21px;font-weight:500;letter-spacing:-.015em;line-height:1.3}
+.role .org{margin-top:6px;font-size:15px;color:var(--ink-3)}
+.role p{margin:0;font-size:16px;color:var(--ink-2)}
+@media (max-width:900px){.role{grid-template-columns:1fr}}
+.edu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:64px}
+.edu article{border:1px solid var(--line);background:#fff;padding:28px}
+.edu .yrs{font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+.edu h3{margin:10px 0 4px;font-size:20px;font-weight:500;letter-spacing:-.015em}
+.edu .inst{font-size:15px;color:var(--ink-2)}
+.edu .note{margin-top:16px;display:inline-block;font-family:var(--mono);font-size:12px;padding:5px 9px;background:var(--accent-soft);color:var(--accent-ink)}
+.edu .research{margin:16px 0 0;font-size:15px;color:var(--ink-2);padding-top:16px;border-top:1px solid var(--line)}
+@media (max-width:820px){.edu{grid-template-columns:1fr}}
+
+/* contact */
+.contact h2{margin:0;font-weight:500;font-size:clamp(40px,6.4vw,84px);line-height:1.02;letter-spacing:-.035em;max-width:16ch}
+.contact h2 span{color:var(--sea)}
+.contact .lede{margin:24px 0 0;max-width:58ch;font-size:18px;color:var(--night-muted)}
+.contact-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:64px;border-top:1px solid rgba(233,236,239,.18)}
+.contact-grid > *{padding:24px 24px 24px 0}
+.contact-grid > * + *{padding-left:24px;border-left:1px solid rgba(233,236,239,.12)}
+.contact-grid .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--night-muted)}
+.contact-grid a,.contact-grid .v{display:block;margin-top:8px;font-size:17px;color:var(--night-text);text-decoration:none;word-break:break-word}
+.contact-grid a:hover{color:var(--sea)}
+.dark .btn{border-color:var(--night-text);color:var(--night-text)}
+.dark .btn:hover{background:var(--night-text);color:var(--night)}
+.dark .btn.solid{background:var(--sea);border-color:var(--sea);color:var(--night)}
+.dark .btn.solid:hover{background:#8DBBE5;border-color:#8DBBE5}
+.contact-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:40px}
+@media (max-width:900px){.contact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.contact-grid > *:nth-child(3){padding-left:0;border-left:0}}
+@media (max-width:520px){.contact-grid{grid-template-columns:1fr}.contact-grid > * + *{padding-left:0;border-left:0;border-top:1px solid rgba(233,236,239,.12)}}
+footer{border-top:1px solid rgba(233,236,239,.12);padding:28px 0 40px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:var(--night-muted)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .draw{animation:none;stroke-dasharray:none}
+  .fade{animation:none;opacity:1}
+}
+@media print{.nav,.drawing,.contact-actions{display:none}.reveal{opacity:1;transform:none}.case-body{display:grid}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Tamizharuvi Maniyan Annamalai — home">
+      <span class="brand-mark" aria-hidden="true">TA</span>
+      <span>Tamizharuvi M. A.<small>Naval Architect · London</small></span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="#about">Profile</a></li>
+        <li><a href="#work">Projects</a></li>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="Tamizharuvi_CV.pdf" download>
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v9M4 7l4 4 4-4M2.5 14h11"/></svg>
+      <span class="lg">Download CV</span><span class="sm">CV</span>
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-top">
+      <span class="status"><i aria-hidden="true"></i>Available for engineering engagements</span>
+      <span class="label">51.51° N · 0.13° W — London, UK</span>
+    </div>
+    <h1>Naval architecture for vessels <span>already at sea.</span></h1>
+    <div class="hero-grid">
+      <p class="hero-lede"><span class="hero-role">Tamizharuvi Maniyan Annamalai — Lead Naval Architect / Assistant Manager, Marine Technology at Cybermarine Ltd.</span> Seven years of vessel modification engineering, hydrodynamic consultancy and stability work for offshore, subsea, passenger and commercial clients — from concept and 3D model to class approval.</p>
+      <div class="hero-actions">
+        <a class="btn solid" href="#work">View selected projects
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Technical profile drawing -->
+  <div class="drawing" aria-hidden="true">
+    <div class="wrap drawing-inner">
+      <svg viewBox="0 0 1000 300" preserveAspectRatio="xMidYMid meet">
+        <!-- baseline & waterline -->
+        <path class="d-thin" d="M20 250H980"/>
+        <path class="d-wl fade" d="M20 205H980"/>
+        <!-- frame ticks -->
+        <g class="d-thin fade">
+          <path d="M70 250v8M157 250v6M245 250v6M332 250v6M420 250v6M507 250v8M595 250v6M682 250v6M770 250v6M857 250v6M945 250v8"/>
+        </g>
+        <!-- hull -->
+        <path class="d-line draw" style="--len:2100" d="M70 140 L70 182 C72 228 100 248 140 250 L790 250 C866 250 904 228 924 182 L948 118 L900 122 L70 140 Z"/>
+        <!-- bulwark / deck line -->
+        <path class="d-thin draw d2" style="--len:900" d="M70 132 L700 128"/>
+        <!-- accommodation block -->
+        <path class="d-line draw d2" style="--len:900" d="M700 128 L700 78 L905 74 L912 121"/>
+        <path class="d-thin draw d2" style="--len:600" d="M700 103 L908 99M720 78 L720 128"/>
+        <!-- bridge -->
+        <path class="d-line draw d2" style="--len:500" d="M740 77 L748 50 L880 48 L892 75"/>
+        <path class="d-thin draw d3" style="--len:300" d="M760 62 L876 60"/>
+        <!-- helideck -->
+        <path class="d-line draw d3" style="--len:400" d="M836 38 L952 36"/>
+        <path class="d-thin draw d3" style="--len:300" d="M852 38 L870 48M930 37 L908 74"/>
+        <!-- mast -->
+        <path class="d-thin draw d3" style="--len:200" d="M800 48 L800 14M790 24 L810 24"/>
+        <!-- crane -->
+        <path class="d-line draw d2" style="--len:300" d="M520 130 L520 92 L540 92 L540 130"/>
+        <path class="d-line draw d3" style="--len:500" d="M528 92 L318 22"/>
+        <path class="d-thin draw d3" style="--len:400" d="M540 92 L560 70 L318 22M318 22 L318 96"/>
+        <path class="d-thin fade" d="M312 96h12v8h-12z"/>
+        <!-- A-frame aft -->
+        <path class="d-line draw d2" style="--len:300" d="M84 136 L104 74 L132 135"/>
+        <!-- ROV hangar / containers on deck -->
+        <path class="d-thin draw d3" style="--len:500" d="M380 130v-22h80v22M600 129v-26h70v26M180 134v-18h60v18"/>
+        <!-- moonpool hint -->
+        <path class="d-thin fade" d="M430 250v-60M470 250v-60" stroke-dasharray="3 4"/>
+        <!-- annotations -->
+        <g class="fade">
+          <text class="d-text acc" x="24" y="198">DWL</text>
+          <text class="d-text" x="24" y="243">BL</text>
+          <text class="d-text" x="62" y="274">AP</text>
+          <text class="d-text" x="499" y="274">MS</text>
+          <text class="d-text" x="937" y="274">FP</text>
+          <path class="d-dim" d="M70 288H945M70 283v10M945 283v10"/>
+          <rect x="465" y="280" width="80" height="16" fill="var(--paper)"/>
+          <text class="d-text" x="474" y="292">LOA</text>
+          <path class="d-dim" d="M318 22 L250 8"/>
+          <text class="d-text" x="140" y="12">400 t main crane</text>
+          <path class="d-dim" d="M940 36 L952 20"/>
+          <text class="d-text" x="948" y="14" text-anchor="end">helideck · CAP 437</text>
+        </g>
+      </svg>
+      <div class="cap">
+        <span class="label">Fig. 1 — Profile, subsea construction vessel (schematic)</span>
+        <span class="label">Not to scale</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="figures">
+      <div class="fig"><b>7+</b><span>Years in naval architecture</span></div>
+      <div class="fig"><b>5</b><span>Class societies worked with</span></div>
+      <div class="fig"><b>10+</b><span>Vessel and structure types</span></div>
+      <div class="fig"><b>7</b><span>Featured projects below</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROFILE -->
+<section class="block" id="about">
+  <div class="wrap">
+    <div class="about">
+      <div class="spacer"><div class="sec-num">01 — Profile</div></div>
+      <div class="about-body reveal">
+        <p>Most of my work sits where a vessel already in service, a client who needs it to do something new, and a class society that needs convincing all meet.</p>
+        <p>I lead marine technology delivery at Cybermarine Ltd in London — multi-scope modification engineering, independent hydrodynamic consultancy and decarbonisation retrofits for international offshore, subsea and passenger clients.</p>
+        <p>The path runs from Mumbai, where I started on production drawings for drydock gates and 3D hull structures in CADMATIC, through an MSc in Maritime Engineering Science at Southampton, to London. Along the way I’ve written Python and C# automation for production drawing generation — where Industry 4.0 meets shipyard reality.</p>
+        <div class="clients">
+          <span class="label">Selected clients &amp; programmes</span>
+          <ul>
+            <li>Boskalis Subsea Services</li>
+            <li>Maersk</li>
+            <li>Lindblad Expeditions</li>
+            <li>JANA Marine Services</li>
+            <li>L&amp;T · Cochin Shipyard</li>
+          </ul>
+        </div>
+      </div>
+      <aside class="triangle reveal" aria-label="How I work">
+        <h3>The engineering triangle</h3>
+        <p>Every modification is a balance of three constraints.</p>
+        <svg viewBox="0 0 300 230" role="img" aria-label="Triangle diagram: vessel in service, client requirement, and class and statutory compliance, with the engineering solution at the centre">
+          <path d="M150 28 L272 200 L28 200 Z" fill="none" stroke="#0B1520" stroke-width="1.2"/>
+          <circle cx="150" cy="28" r="5" fill="#0B1520"/>
+          <circle cx="272" cy="200" r="5" fill="#0B1520"/>
+          <circle cx="28" cy="200" r="5" fill="#0B1520"/>
+          <circle cx="150" cy="142" r="8" fill="#0B4F8A"/>
+          <circle cx="150" cy="142" r="16" fill="none" stroke="#0B4F8A" stroke-opacity=".35"/>
+          <text x="150" y="14" text-anchor="middle">VESSEL IN SERVICE</text>
+          <text x="290" y="222" text-anchor="end">CLIENT NEED</text>
+          <text x="10" y="222">CLASS · FLAG</text>
+          <text x="150" y="174" text-anchor="middle" style="fill:#0B4F8A">SOLUTION</text>
+        </svg>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="block" id="work" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">02 — Projects</div>
+      <div>
+        <h2>Selected projects and the problems they brought.</h2>
+        <p>Modification engineering, motion studies, stability and production engineering. Open a project for scope and deliverables.</p>
+      </div>
+    </div>
+
+    <div class="work">
+
+      <details class="case reveal" open>
+        <summary>
+          <span class="no">01</span>
+          <h3>CSV Boka Northern Ocean</h3>
+          <span class="sub">Multi-scope vessel modification engineering</span>
+          <span class="yr">Sep 2025 → ongoing</span>
+          <span class="tog" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1v12M1 7h12"/></svg></span>
+        </summary>
+        <div class="case-body">
+          <p class="lead">Deck reconfiguration and system modifications on an SPS-Code subsea construction vessel, driven by the installation of new ROV systems — all designed to stay inside the vessel’s existing statutory and class envelope.</p>
+          <ul>
+            <li><b>Gangway access rearrangement (P&amp;S)</b> — platform relocation, new deck openings, taut-wire grillage removal, walkways and handrails.</li>
+            <li><b>PDU container installation</b> — two containers on starboard side; seafastening, cable trays and deck strength verification.</li>
+            <li><b>400 t crane bucket relocation</b> — hoist-line buckets moved; bumper protection around doghouse, ladder and refuelling pedestal.</li>
+            <li><b>Closing bulwarks &amp; freeing ports</b> — hinged freeing ports at pilot access; ICLL freeing-port evaluation and loadline plan updates.</li>
+            <li><b>Project office → ROV control room</b> — fire safety, escape, HVAC and electrical SLD engineering per SPS Code and SOLAS.</li>
+            <li><b>Fire pump relocation</b> — sea chest sizing, NPSH and dynamics calculations; piping, structural and electrical workshop drawings.</li>
+            <li><b>Gastight cofferdam over Ex-rated battery room</b> — scantlings, F&amp;G modifications, ventilation and hazardous-area plans.</li>
+            <li><b>Mooring fittings, pilot walkway, whipline platform and helideck plan (CAP 437)</b> updates.</li>
+          </ul>
+          <p class="deliv">Delivered with clash-free FEED 3D local models (IGES), full Class/Flag documentation and direct liaison with Bureau Veritas through approval.</p>
+          <div class="meta">
+            <dl>
+              <div><dt>Client</dt><dd>Boskalis Subsea Services</dd></div>
+              <div><dt>Class</dt><dd>Bureau Veritas</dd></div>
+              <div><dt>Scope</dt><dd>10 modification packages</dd></div>
+              <div><dt>Status</dt><dd>Ongoing</dd></div>
+            </dl>
+            <div class="tags"><span>SPS Code</span><span>SOLAS</span><span>ICLL</span><span>CAP 437</span><span>CADMATIC</span><span>Rhino 3D</span></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="case reveal">
+        <summary>
+          <span class="no">02</span>
+          <h3>Maersk T-Class — E-Sail retrofit</h3>
+          <span class="sub">Wind-assisted propulsion · PM &amp; stability</span>
+          <span class="yr">2025 → ongoing</span>
+          <span class="tog" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1v12M1 7h12"/></svg></span>
+        </summary>
+        <div class="case-body">
+          <p class="lead">Project management and stability-led technical delivery for installing Wind-Assisted Ship Propulsion (E-Sail) units on Maersk T-Class vessels, as part of the operator’s decarbonisation programme.</p>
+          <ul>
+            <li>Intact and damage stability, WASP criteria evaluation and fatigue assessment.</li>
+            <li>Coordination of inclining experiments, draft surveys and installation planning.</li>
+            <li>Detailed responses to classification society comments through to closure.</li>
+          </ul>
+          <div class="meta">
+            <dl>
+              <div><dt>Client</dt><dd>Maersk</dd></div>
+              <div><dt>Scope</dt><dd>WASP installation</dd></div>
+              <div><dt>Role</dt><dd>Project management, stability</dd></div>
+            </dl>
+            <div class="tags"><span>Decarbonisation</span><span>Intact stability</span><span>Damage stability</span><span>Inclining</span></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="case reveal">
+        <summary>
+          <span class="no">03</span>
+          <h3>DSV Jana 201 — roll reduction</h3>
+          <span class="sub">Independent hydrodynamic consultancy</span>
+          <span class="yr">Feb 2026</span>
+          <span class="tog" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1v12M1 7h12"/></svg></span>
+        </summary>
+        <div class="case-body">
+          <p class="lead">A diving support vessel under construction showing unusually high roll and pitch in moderate seas. An independent review established a baseline and options for motion control.</p>
+          <ul>
+            <li>Linear diffraction analysis: roll RAOs, natural roll and pitch periods, roll stiffness and damping (bilge keel, viscous, nonlinear GZ).</li>
+            <li>Review of hull form, stability, shipyard hydrodynamic predictions and loading conditions.</li>
+            <li>Operability assessment including moonpool and heading effects.</li>
+            <li>Recommendations: loading for GM and roll stiffness, heading selection, bilge keel optimisation, passive stabilisation (flume, U-tank, controlled-flooding tanks).</li>
+          </ul>
+          <p class="deliv">Deliverable: consolidated technical report on hydrodynamic review and motion stabilisation.</p>
+          <div class="meta">
+            <dl>
+              <div><dt>Client</dt><dd>JANA Marine Services, Khobar</dd></div>
+              <div><dt>Type</dt><dd>Hydrodynamic consultancy</dd></div>
+            </dl>
+            <div class="tags"><span>HydroD</span><span>Sesam GeniE</span><span>Roll RAO</span><span>Seakeeping</span></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="case reveal">
+        <summary>
+          <span class="no">04</span>
+          <h3>National Geographic Gemini</h3>
+          <span class="sub">Roll resonance &amp; passenger comfort</span>
+          <span class="yr">Jul 2025</span>
+          <span class="tog" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1v12M1 7h12"/></svg></span>
+        </summary>
+        <div class="case-body">
+          <p class="lead">An expedition vessel whose natural roll period sat close to the prevailing wave energy — large motions even in calm conditions. The task: de-tune the resonance.</p>
+          <ul>
+            <li>Panel, mass and damping model; roll RAO, added mass and inertia, damping coefficients and free-surface effects.</li>
+            <li>Alternative loading conditions: GM variation, roll gyradius, draft increase and partial tank filling.</li>
+            <li>Feasibility of using existing full-breadth double-bottom tanks as passive stabilisers.</li>
+            <li>Bilge keel modification and passive/active stabiliser options.</li>
+          </ul>
+          <p class="deliv">Deliverables: operating procedure for roll reduction and a stabilisation feasibility study with bilge keel modification plan.</p>
+          <div class="meta">
+            <dl>
+              <div><dt>Client</dt><dd>Lindblad Expeditions</dd></div>
+              <div><dt>Region</dt><dd>Ecuador</dd></div>
+              <div><dt>Type</dt><dd>Roll reduction consultancy</dd></div>
+            </dl>
+            <div class="tags"><span>Resonance</span><span>Anti-roll tanks</span><span>Bilge keels</span></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="case reveal">
+        <summary>
+          <span class="no">05</span>
+          <h3>HYDRA floating aquafarm</h3>
+          <span class="sub">Production engineering &amp; project management</span>
+          <span class="yr">2021 – 2023</span>
+          <span class="tog" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1v12M1 7h12"/></svg></span>
+        </summary>
+        <div class="case-body">
+          <p class="lead">End-to-end production engineering for a first-of-its-kind 75 m diameter floating aquafarm stationed in the North Sea.</p>
+          <ul>
+            <li>Concept design translated into a full workshop drawing set, assembly drawings and bill of materials.</li>
+            <li>Structural 3D model in CADMATIC with radial framing — a geometry rarely seen in conventional shipbuilding.</li>
+            <li>Production deliverables coordinated directly with the fabrication team.</li>
+          </ul>
+          <div class="meta">
+            <dl>
+              <div><dt>Location</dt><dd>North Sea</dd></div>
+              <div><dt>Size</dt><dd>75 m diameter</dd></div>
+              <div><dt>Role</dt><dd>Production engineering, PM</dd></div>
+            </dl>
+            <div class="tags"><span>CADMATIC Hull</span><span>Radial framing</span><span>Aquaculture</span></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="case reveal">
+        <summary>
+          <span class="no">06</span>
+          <h3>Salt Wind Explorer &amp; Berge Vinson</h3>
+          <span class="sub">Draft increase feasibility</span>
+          <span class="yr">2023 – 2024</span>
+          <span class="tog" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1v12M1 7h12"/></svg></span>
+        </summary>
+        <div class="case-body">
+          <p class="lead">Two draft-increase studies, both taken through to class submission.</p>
+          <ul>
+            <li><b>Salt Wind Explorer</b> — full project management: structural assessment, stability analysis, deliverables, and detailed class comment responses through closure.</li>
+            <li><b>Berge Vinson</b> — feasibility study followed by a complete package of structural drawings, stability reports and class submission documents.</li>
+          </ul>
+          <div class="meta">
+            <dl>
+              <div><dt>Type</dt><dd>Feasibility &amp; class submission</dd></div>
+              <div><dt>Scope</dt><dd>Structure, stability</dd></div>
+            </dl>
+            <div class="tags"><span>Draft increase</span><span>Longitudinal strength</span><span>Class liaison</span></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="case reveal">
+        <summary>
+          <span class="no">07</span>
+          <h3>L&amp;T New Drydock Gate &amp; Bombay Drydock Gates</h3>
+          <span class="sub">Production engineering</span>
+          <span class="yr">2018 – 2021</span>
+          <span class="tog" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1v12M1 7h12"/></svg></span>
+        </summary>
+        <div class="case-body">
+          <p class="lead">Complete production drawing packages for the L&amp;T New Drydock Gate at Cochin Shipyard, and detailed engineering for the Bombay Drydock Gates.</p>
+          <ul>
+            <li>Shop and assembly drawings, bill of materials, nesting plans and yard support — contributing to a 15% reduction in potential construction delays.</li>
+            <li>General arrangement and structural drawings for floating caisson gates and tugs.</li>
+          </ul>
+          <div class="meta">
+            <dl>
+              <div><dt>Location</dt><dd>Kochi · Mumbai</dd></div>
+              <div><dt>Type</dt><dd>Production engineering</dd></div>
+            </dl>
+            <div class="tags"><span>Nesting</span><span>Shop drawings</span><span>Caisson gates</span></div>
+          </div>
+        </div>
+      </details>
+    </div>
+
+    <div class="more reveal">
+      <div class="label" style="padding-top:16px">Also</div>
+      <ul>
+        <li><b>3D structural modelling</b>Tugs, LPG cylinder carriers, MOPUs, jack-up and modular pontoon barges, passenger ferries, H-barges, stern trawlers.</li>
+        <li><b>Concept design</b>Zero-emission OSV, floating bridge across the River Tapti, Flettner rotor, Fortuna Magpie three-fuel concept, decarbonisation for pilot vessels.</li>
+        <li><b>Design automation</b>Python and C# scripts for production drawing generation — less manual effort, fewer errors.</li>
+        <li><b>CYBERMASTER programme</b>Pilot vessel projects and concept design coordination at Cybermarine.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="block dark" id="capabilities">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">03 — Capabilities</div>
+      <div>
+        <h2>Tools, rules and vessel types.</h2>
+        <p>The day-to-day vocabulary of the work.</p>
+      </div>
+    </div>
+    <div class="caps reveal">
+      <div class="cap">
+        <h3>Production design</h3>
+        <ul><li>CADMATIC Hull &amp; Structure</li><li>AVEVA PDMS</li><li>Rhino 3D</li><li>AutoCAD</li></ul>
+      </div>
+      <div class="cap">
+        <h3>Hydrostatics &amp; hydrodynamics</h3>
+        <ul><li>GHS</li><li>Maxsurf</li><li>DNV Sesam GeniE</li><li>HydroD</li><li>Ansys Workbench</li></ul>
+      </div>
+      <div class="cap">
+        <h3>Simulation &amp; CFD</h3>
+        <ul><li>Siemens Star-CCM+</li><li>MATLAB</li><li>SolidWorks</li></ul>
+      </div>
+      <div class="cap">
+        <h3>Code &amp; delivery</h3>
+        <ul><li>Python</li><li>C#</li><li>Oracle Primavera</li><li>3D printing</li></ul>
+      </div>
+    </div>
+    <div class="reg reveal">
+      <div>
+        <h3>Classification societies</h3>
+        <div class="chips"><span>Bureau Veritas</span><span>DNV</span><span>Lloyd’s Register</span><span>ABS</span><span>IRS</span></div>
+      </div>
+      <div>
+        <h3>Vessel &amp; structure types</h3>
+        <div class="chips"><span>CSV / SPS</span><span>DSV</span><span>FPSO / FSO</span><span>MOPU / Jack-up</span><span>Tug</span><span>LPG carrier</span><span>Passenger</span><span>Bulk carrier</span><span>Aquafarm</span><span>Drydock gates</span></div>
+      </div>
+      <div>
+        <h3>Codes &amp; regulations</h3>
+        <div class="chips"><span>SOLAS</span><span>ICLL</span><span>SPS Code</span><span>CAP 437</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="block" id="experience">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">04 — Experience</div>
+      <div><h2>Mumbai to Southampton to London.</h2></div>
+    </div>
+    <div class="timeline">
+      <div class="role reveal">
+        <div class="when now">Oct 2024 — Present</div>
+        <div><h3>Lead Naval Architect / Assistant Manager — Marine Technology</h3><div class="org">Cybermarine Ltd · London, United Kingdom</div></div>
+        <p>End-to-end naval architecture delivery for international offshore, subsea and passenger clients: multi-scope modification engineering, hydrodynamic consultancy and decarbonisation retrofits.</p>
+      </div>
+      <div class="role reveal">
+        <div class="when">Mar 2023 — Aug 2024</div>
+        <div><h3>Senior Naval Architect &amp; Team Leader</h3><div class="org">Cybermarine Knowledge Systems · Mumbai, India</div></div>
+        <p>Detailed design and hull structural design lead. Technical delivery across vessel classes, mentoring juniors and preparing production packages for class submission.</p>
+      </div>
+      <div class="role reveal">
+        <div class="when">Jan 2021 — Mar 2023</div>
+        <div><h3>Naval Architect &amp; Team Leader</h3><div class="org">Cybermarine Knowledge Systems · Mumbai, India</div></div>
+        <p>Detailed and hull structural design, including project management of the HYDRA floating aquafarm and the first design-automation scripts.</p>
+      </div>
+      <div class="role reveal">
+        <div class="when">May 2018 — Jan 2021</div>
+        <div><h3>Junior Naval Architect</h3><div class="org">Cybermarine Knowledge Systems · Mumbai, India</div></div>
+        <p>Production engineering for the L&amp;T New Drydock Gate at Cochin Shipyard and the Bombay Drydock Gates — shop, assembly and nesting drawings.</p>
+      </div>
+    </div>
+
+    <div class="edu">
+      <article class="reveal">
+        <span class="yrs">2023 — 2024</span>
+        <h3>MSc Maritime Engineering Science</h3>
+        <div class="inst">University of Southampton, United Kingdom</div>
+        <span class="note">With Merit</span>
+        <p class="research">Research: numerical investigation of wind-assisted ship propulsion — Flettner rotor scaling, towing, self-propulsion, leeway and virtual wind-tunnel tests in Star-CCM+.</p>
+      </article>
+      <article class="reveal">
+        <span class="yrs">2014 — 2018</span>
+        <h3>B.E. Naval Architecture &amp; Offshore Engineering</h3>
+        <div class="inst">AMET University, Chennai, India</div>
+        <span class="note">+ Diploma in Business Management, First Class</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="block dark contact" id="contact">
+  <div class="wrap">
+    <div class="sec-num" style="display:inline-block;margin-bottom:40px">05 — Contact</div>
+    <h2>Have a vessel that needs <span>convincing?</span></h2>
+    <p class="lede">Available for vessel modification engineering, hydrodynamic and stability consultancy, and class-approval-led delivery.</p>
+    <div class="contact-actions">
+      <a class="btn solid" href="mailto:tamizharuvi_a@cybermarine.org">Email me
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+      <a class="btn" href="Tamizharuvi_CV.pdf" download>Download CV (PDF)</a>
+    </div>
+    <div class="contact-grid">
+      <div><span class="k">Email</span><a href="mailto:tamizharuvi_a@cybermarine.org">tamizharuvi_a@cybermarine.org</a></div>
+      <div><span class="k">Phone</span><a href="tel:+447587654250">+44 7587 654250</a></div>
+      <div><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/aruvi-in/" rel="noopener">linkedin.com/in/aruvi-in</a></div>
+      <div><span class="k">Based in</span><span class="v">London, United Kingdom</span></div>
+    </div>
+    <footer>
+      <span>© 2026 Tamizharuvi Maniyan Annamalai</span>
+      <span>hiaruvi.com</span>
+    </footer>
+  </div>
+</section>
+
+</main>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>8)}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+
+    var links={};document.querySelectorAll('.nav-links a').forEach(function(a){links[a.getAttribute('href').slice(1)]=a});
+    var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.toggle('active',k===e.target.id)})}})},{rootMargin:'-45% 0px -50% 0px'});
+    ['about','work','capabilities','experience','contact'].forEach(function(id){var s=document.getElementById(id);if(s)so.observe(s)});
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')});
+  }
+})();
+</script>
+</body>
+</html>
