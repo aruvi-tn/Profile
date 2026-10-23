@@ -233,6 +233,36 @@ section.block{padding:clamp(80px,10vw,128px) 0}
 @media (max-width:520px){.contact-grid{grid-template-columns:1fr}.contact-grid > * + *{padding-left:0;border-left:0;border-top:1px solid rgba(233,236,239,.12)}}
 footer{border-top:1px solid rgba(233,236,239,.12);padding:28px 0 40px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:var(--night-muted)}
 
+/* portrait */
+.portrait{margin:28px 0 0;position:relative;aspect-ratio:4/5;background:var(--paper-2);border:1px solid var(--line);overflow:hidden;display:grid;place-items:center;max-width:200px}
+.portrait .mf{font-family:var(--mono);font-size:28px;letter-spacing:.08em;color:var(--ink-3)}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@media (max-width:1000px){.about>.spacer{display:block}.portrait{max-width:220px}}
+
+/* project visuals */
+.shot{grid-column:2;margin:0 0 24px;border:1px solid var(--line);background:var(--paper-2);overflow:hidden}
+.shot img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+@media (max-width:900px){.shot{grid-column:1}}
+
+/* insights */
+.posts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.post{display:flex;flex-direction:column;gap:14px;padding:28px;border:1px solid var(--line);background:#fff;text-decoration:none;color:var(--ink);transition:border-color .2s,transform .3s var(--ease)}
+.post:hover{border-color:var(--ink);transform:translateY(-2px)}
+.post .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.post h3{margin:0;font-size:21px;font-weight:500;letter-spacing:-.015em;line-height:1.3}
+.post p{margin:0;font-size:15.5px;color:var(--ink-2);flex:1}
+.post .rd{font-family:var(--mono);font-size:12px;color:var(--ink-3);display:flex;justify-content:space-between}
+@media (max-width:900px){.posts{grid-template-columns:1fr}}
+
+/* credentials */
+.creds{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.creds article{border-top:1.5px solid var(--ink);padding-top:18px}
+.creds h3{margin:0 0 12px;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.creds ul{margin:0;padding:0;list-style:none}
+.creds li{padding:10px 0;border-bottom:1px solid var(--line);font-size:16px}
+.creds li span{display:block;font-size:14px;color:var(--ink-3)}
+@media (max-width:900px){.creds{grid-template-columns:1fr}}
+
 /* reveal */
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .reveal.in{opacity:1;transform:none}
@@ -260,6 +290,7 @@ footer{border-top:1px solid rgba(233,236,239,.12);padding:28px 0 40px;display:fl
         <li><a href="#work">Projects</a></li>
         <li><a href="#capabilities">Capabilities</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#insights">Insights</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -365,7 +396,13 @@ footer{border-top:1px solid rgba(233,236,239,.12);padding:28px 0 40px;display:fl
 <section class="block" id="about">
   <div class="wrap">
     <div class="about">
-      <div class="spacer"><div class="sec-num">01 — Profile</div></div>
+      <div class="spacer">
+        <div class="sec-num">01 — Profile</div>
+        <figure class="portrait">
+          <span class="mf" aria-hidden="true">TA</span>
+          <img src="img/profile.jpg" alt="Tamizharuvi Maniyan Annamalai" width="400" height="500" loading="lazy" onerror="this.remove()">
+        </figure>
+      </div>
       <div class="about-body reveal">
         <p>Most of my work sits where a vessel already in service, a client who needs it to do something new, and a class society that needs convincing all meet.</p>
         <p>I lead marine technology delivery at Cybermarine Ltd in London — multi-scope modification engineering, independent hydrodynamic consultancy and decarbonisation retrofits for international offshore, subsea and passenger clients.</p>
@@ -423,6 +460,7 @@ footer{border-top:1px solid rgba(233,236,239,.12);padding:28px 0 40px;display:fl
           <span class="tog" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1v12M1 7h12"/></svg></span>
         </summary>
         <div class="case-body">
+          <figure class="shot"><img src="img/projects/boka-northern-ocean.jpg" alt="CSV Boka Northern Ocean modification model" loading="lazy" onerror="this.parentNode.remove()"></figure>
           <p class="lead">Deck reconfiguration and system modifications on an SPS-Code subsea construction vessel, driven by the installation of new ROV systems — all designed to stay inside the vessel’s existing statutory and class envelope.</p>
           <ul>
             <li><b>Gangway access rearrangement (P&amp;S)</b> — platform relocation, new deck openings, taut-wire grillage removal, walkways and handrails.</li>
@@ -456,6 +494,7 @@ footer{border-top:1px solid rgba(233,236,239,.12);padding:28px 0 40px;display:fl
           <span class="tog" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1v12M1 7h12"/></svg></span>
         </summary>
         <div class="case-body">
+          <figure class="shot"><img src="img/projects/maersk-esail.jpg" alt="E-Sail installation on a Maersk T-Class vessel" loading="lazy" onerror="this.parentNode.remove()"></figure>
           <p class="lead">Project management and stability-led technical delivery for installing Wind-Assisted Ship Propulsion (E-Sail) units on Maersk T-Class vessels, as part of the operator’s decarbonisation programme.</p>
           <ul>
             <li>Intact and damage stability, WASP criteria evaluation and fatigue assessment.</li>
@@ -482,6 +521,7 @@ footer{border-top:1px solid rgba(233,236,239,.12);padding:28px 0 40px;display:fl
           <span class="tog" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1v12M1 7h12"/></svg></span>
         </summary>
         <div class="case-body">
+          <figure class="shot"><img src="img/projects/jana-201.jpg" alt="DSV Jana 201 hydrodynamic model" loading="lazy" onerror="this.parentNode.remove()"></figure>
           <p class="lead">A diving support vessel under construction showing unusually high roll and pitch in moderate seas. An independent review established a baseline and options for motion control.</p>
           <ul>
             <li>Linear diffraction analysis: roll RAOs, natural roll and pitch periods, roll stiffness and damping (bilge keel, viscous, nonlinear GZ).</li>
@@ -509,6 +549,7 @@ footer{border-top:1px solid rgba(233,236,239,.12);padding:28px 0 40px;display:fl
           <span class="tog" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1v12M1 7h12"/></svg></span>
         </summary>
         <div class="case-body">
+          <figure class="shot"><img src="img/projects/gemini.jpg" alt="National Geographic Gemini roll study" loading="lazy" onerror="this.parentNode.remove()"></figure>
           <p class="lead">An expedition vessel whose natural roll period sat close to the prevailing wave energy — large motions even in calm conditions. The task: de-tune the resonance.</p>
           <ul>
             <li>Panel, mass and damping model; roll RAO, added mass and inertia, damping coefficients and free-surface effects.</li>
@@ -537,6 +578,7 @@ footer{border-top:1px solid rgba(233,236,239,.12);padding:28px 0 40px;display:fl
           <span class="tog" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1v12M1 7h12"/></svg></span>
         </summary>
         <div class="case-body">
+          <figure class="shot"><img src="img/projects/hydra.jpg" alt="HYDRA floating aquafarm 3D structural model" loading="lazy" onerror="this.parentNode.remove()"></figure>
           <p class="lead">End-to-end production engineering for a first-of-its-kind 75 m diameter floating aquafarm stationed in the North Sea.</p>
           <ul>
             <li>Concept design translated into a full workshop drawing set, assembly drawings and bill of materials.</li>
@@ -563,6 +605,7 @@ footer{border-top:1px solid rgba(233,236,239,.12);padding:28px 0 40px;display:fl
           <span class="tog" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1v12M1 7h12"/></svg></span>
         </summary>
         <div class="case-body">
+          <figure class="shot"><img src="img/projects/draft-increase.jpg" alt="Draft increase study" loading="lazy" onerror="this.parentNode.remove()"></figure>
           <p class="lead">Two draft-increase studies, both taken through to class submission.</p>
           <ul>
             <li><b>Salt Wind Explorer</b> — full project management: structural assessment, stability analysis, deliverables, and detailed class comment responses through closure.</li>
@@ -587,6 +630,7 @@ footer{border-top:1px solid rgba(233,236,239,.12);padding:28px 0 40px;display:fl
           <span class="tog" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 1v12M1 7h12"/></svg></span>
         </summary>
         <div class="case-body">
+          <figure class="shot"><img src="img/projects/drydock-gates.jpg" alt="Drydock gate production drawings" loading="lazy" onerror="this.parentNode.remove()"></figure>
           <p class="lead">Complete production drawing packages for the L&amp;T New Drydock Gate at Cochin Shipyard, and detailed engineering for the Bombay Drydock Gates.</p>
           <ul>
             <li>Shop and assembly drawings, bill of materials, nesting plans and yard support — contributing to a 15% reduction in potential construction delays.</li>
@@ -708,10 +752,74 @@ footer{border-top:1px solid rgba(233,236,239,.12);padding:28px 0 40px;display:fl
   </div>
 </section>
 
+<!-- INSIGHTS -->
+<section class="block" id="insights" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">05 — Insights</div>
+      <div>
+        <h2>Notes from the work.</h2>
+        <p>Short technical notes on problems that come up again and again in modification and consultancy work.</p>
+      </div>
+    </div>
+    <div class="posts">
+      <a class="post reveal" href="insights/roll-resonance.html">
+        <span class="k">Seakeeping</span>
+        <h3>When a ship rolls too well: de-tuning roll resonance</h3>
+        <p>Why some vessels roll hard in modest seas, and the levers — GM, gyradius, tanks, bilge keels — that move the natural period away from the waves.</p>
+        <span class="rd"><span>6 min read</span><span>→</span></span>
+      </a>
+      <a class="post reveal" href="insights/wind-assisted-propulsion-stability.html">
+        <span class="k">Decarbonisation</span>
+        <h3>Stability first: retrofitting wind-assisted propulsion</h3>
+        <p>Rotors and sails add weight high up and a new heeling moment. What to check before, during and after a WASP installation.</p>
+        <span class="rd"><span>5 min read</span><span>→</span></span>
+      </a>
+      <a class="post reveal" href="insights/freeing-ports-icll.html">
+        <span class="k">Load Line</span>
+        <h3>Bulwarks, wells and freeing ports under ICLL</h3>
+        <p>Raising a bulwark is rarely just steelwork. A practical walk through the freeing-port area check and what it means for the loadline plan.</p>
+        <span class="rd"><span>5 min read</span><span>→</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS (hidden until filled in — remove the comment markers around the section to publish)
+<section class="block" id="credentials" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-num">Credentials</div>
+      <div><h2>Certifications and memberships.</h2></div>
+    </div>
+    <div class="creds">
+      <article class="reveal">
+        <h3>Professional memberships</h3>
+        <ul>
+          <li>[e.g. Royal Institution of Naval Architects (RINA)]<span>[Member grade · year]</span></li>
+        </ul>
+      </article>
+      <article class="reveal">
+        <h3>Certifications &amp; training</h3>
+        <ul>
+          <li>[Course or certificate]<span>[Issuer · year]</span></li>
+        </ul>
+      </article>
+      <article class="reveal">
+        <h3>Languages</h3>
+        <ul>
+          <li>[Language]<span>[Level]</span></li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+-->
+
 <!-- CONTACT -->
 <section class="block dark contact" id="contact">
   <div class="wrap">
-    <div class="sec-num" style="display:inline-block;margin-bottom:40px">05 — Contact</div>
+    <div class="sec-num" style="display:inline-block;margin-bottom:40px">06 — Contact</div>
     <h2>Have a vessel that needs <span>convincing?</span></h2>
     <p class="lede">Available for vessel modification engineering, hydrodynamic and stability consultancy, and class-approval-led delivery.</p>
     <div class="contact-actions">
@@ -747,7 +855,7 @@ footer{border-top:1px solid rgba(233,236,239,.12);padding:28px 0 40px;display:fl
 
     var links={};document.querySelectorAll('.nav-links a').forEach(function(a){links[a.getAttribute('href').slice(1)]=a});
     var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.toggle('active',k===e.target.id)})}})},{rootMargin:'-45% 0px -50% 0px'});
-    ['about','work','capabilities','experience','contact'].forEach(function(id){var s=document.getElementById(id);if(s)so.observe(s)});
+    ['about','work','capabilities','experience','insights','contact'].forEach(function(id){var s=document.getElementById(id);if(s)so.observe(s)});
   } else {
     document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')});
   }

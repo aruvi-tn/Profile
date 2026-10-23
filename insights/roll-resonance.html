@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>When a ship rolls too well: de-tuning roll resonance — Tamizharuvi Maniyan Annamalai</title>
+<meta name="description" content="Some vessels roll hard in seas that should be unremarkable. The cause is usually not the weather but the ship itself — its natural roll period sitting right where the waves are.">
+<meta property="og:title" content="When a ship rolls too well: de-tuning roll resonance">
+<meta property="og:description" content="Some vessels roll hard in seas that should be unremarkable. The cause is usually not the weather but the ship itself — its natural roll period sitting right where the waves are.">
+<meta property="og:type" content="article">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230B1520'/%3E%3Cpath d='M12 38h40l-5 10H17z' fill='none' stroke='%23F7F7F4' stroke-width='3'/%3E%3Cpath d='M8 42h48' stroke='%236FA8DC' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/article.css">
+</head>
+<body>
+<header class="nav"><div class="nav-in">
+  <a class="brand" href="../"><span class="brand-mark" aria-hidden="true">TA</span>Tamizharuvi M. A.</a>
+  <a class="back" href="../#insights">← All notes</a>
+</div></header>
+<main>
+<article>
+  <span class="kicker">Seakeeping</span>
+  <h1>When a ship rolls too well: de-tuning roll resonance</h1>
+  <p class="dek">Some vessels roll hard in seas that should be unremarkable. The cause is usually not the weather but the ship itself — its natural roll period sitting right where the waves are.</p>
+  <div class="byline"><span>Tamizharuvi Maniyan Annamalai · Lead Naval Architect</span><span>6 min read</span></div>
+
+  <h2>The symptom</h2>
+  <p>Passengers complain, divers can’t launch, cranes stand idle — yet the sea state is moderate. When motions are out of proportion to the waves, the first suspect is <strong>resonance</strong>: the vessel’s natural roll period coincides with the period at which wave energy reaches it.</p>
+  <p>Roll is the lightest-damped motion a ship has. Heave and pitch are heavily damped by the hull itself; roll is not. So when the excitation period lines up with the natural period, the response is limited almost entirely by damping — and there isn’t much of it.</p>
+
+  <h2>Where the natural period comes from</h2>
+  <p>For small angles the undamped natural roll period is set by the ratio of roll inertia to roll stiffness:</p>
+  <div class="eq">T<sub>φ</sub> = 2π · k<sub>xx</sub> / √(g · GM)
+    <small>k<sub>xx</sub> — roll radius of gyration including added inertia · GM — transverse metacentric height (corrected for free surface)</small></div>
+  <p>The IMO Intact Stability Code gives a practical estimate, T = 2·C·B / √GM, with C depending on the beam-to-draught and length ratios. Either way, the message is the same: <strong>GM and mass distribution are the two dials</strong>.</p>
+
+  <figure>
+    <svg viewBox="0 0 640 300" role="img" aria-label="Roll response amplitude operator against wave period for low and higher damping, with a wave spectrum overlapping the resonant peak">
+      <line x1="60" y1="250" x2="610" y2="250" stroke="#0B1520" stroke-width="1"/>
+      <line x1="60" y1="30" x2="60" y2="250" stroke="#0B1520" stroke-width="1"/>
+      <path d="M60 248 C 160 240 230 200 300 150 C 330 128 340 128 370 150 C 440 200 520 240 610 246 Z" fill="#E4ECF4" stroke="none"/>
+      <path d="M60 240 C 180 232 250 200 290 120 C 305 70 315 40 330 40 C 345 40 355 70 370 120 C 410 200 500 232 610 238" fill="none" stroke="#0B4F8A" stroke-width="2.5"/>
+      <path d="M60 241 C 180 234 260 210 300 170 C 320 150 340 150 360 170 C 400 210 500 234 610 240" fill="none" stroke="#0B1520" stroke-width="1.6" stroke-dasharray="6 5"/>
+      <g font-family="IBM Plex Mono, monospace" font-size="11">
+        <line x1="440" y1="44" x2="470" y2="44" stroke="#0B4F8A" stroke-width="2.5"/><text x="478" y="48" fill="#0B4F8A">low damping</text>
+        <line x1="440" y1="64" x2="470" y2="64" stroke="#0B1520" stroke-width="1.6" stroke-dasharray="6 5"/><text x="478" y="68" fill="#0B1520">+ bilge keels / tanks</text>
+        <rect x="440" y="78" width="30" height="10" fill="#E4ECF4"/><text x="478" y="88" fill="#5B6772">wave energy</text>
+      </g>
+      <text x="300" y="275" font-family="IBM Plex Mono, monospace" font-size="11" fill="#5B6772">T_φ ≈ T_wave</text>
+      <text x="560" y="275" font-family="IBM Plex Mono, monospace" font-size="11" fill="#5B6772">period →</text>
+      <text x="14" y="40" font-family="IBM Plex Mono, monospace" font-size="11" fill="#5B6772">RAO</text>
+    </svg>
+    <figcaption>Fig. 1 — Schematic roll RAO. When the peak sits inside the wave spectrum, small seas produce large motions.</figcaption>
+  </figure>
+
+  <h2>Diagnosing it properly</h2>
+  <ul>
+    <li><strong>Build a hydrodynamic model</strong> — panel mesh, mass model and a realistic damping estimate (wave radiation alone badly under-predicts roll damping; bilge keel and viscous contributions must be added).</li>
+    <li><strong>Run linear diffraction analysis</strong> to get roll RAOs, added inertia and the natural period for each loading condition actually used in service — not just the booklet’s design conditions.</li>
+    <li><strong>Overlay the operating wave climate</strong> and the vessel’s typical speeds and headings. The question is not “is there a peak?” but “is the peak where the waves are?”</li>
+    <li><strong>Check free surface</strong>. Slack tanks reduce effective GM and quietly shift the natural period.</li>
+  </ul>
+
+  <h2>The levers</h2>
+  <p><strong>1. Move the period.</strong> Changing GM through loading — ballast distribution, consumables, partial tank filling — shifts T<sub>φ</sub>. Lower GM lengthens the period and softens accelerations, but every alternative condition still has to satisfy intact (and where applicable damage) stability criteria. Increasing draft or adjusting the roll gyradius works on the same principle.</p>
+  <p><strong>2. Add damping.</strong> Bilge keels are usually the most cost-effective passive measure; extending or re-profiling them can cut the resonant peak noticeably. Their effect grows with roll amplitude and speed, which helps exactly when it’s needed.</p>
+  <p><strong>3. Add a counter-moment.</strong> Passive anti-roll tanks — flume, U-tube or free-surface tanks — move fluid out of phase with the roll if they are tuned to the natural period. Sometimes existing full-breadth double-bottom tanks can be used at a specific filling level, avoiding new steelwork. Active fins are powerful at speed but less useful at anchor or on DP.</p>
+  <p><strong>4. Operate around it.</strong> Heading and speed change the encounter period. An operating procedure that tells the crew which headings to avoid in which seas is often the quickest win while hardware changes are assessed.</p>
+
+  <div class="note">Not every large roll is synchronous. In head or following seas, <strong>parametric roll</strong> — driven by GM varying as waves pass along the hull — can build up when the wave encounter period is roughly half the natural roll period. It needs a different check.</div>
+
+  <h2>Takeaway</h2>
+  <p>Roll resonance is a tuning problem before it is a hardware problem. Establish the natural period for real service conditions, see where it sits against the waves, then choose between moving the period, adding damping, or operating around it — usually some of each.</p>
+
+  <div class="end">
+    <a href="../#insights">← Back to all notes</a>
+    <a href="../#contact">Discuss a project →</a>
+  </div>
+</article>
+</main>
+<footer>© 2026 Tamizharuvi Maniyan Annamalai · hiaruvi.com</footer>
+</body>
+</html>

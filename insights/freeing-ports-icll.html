@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bulwarks, wells and freeing ports under ICLL — Tamizharuvi Maniyan Annamalai</title>
+<meta name="description" content="Raise a bulwark and you create a well that can trap green water. The Load Line Convention sets how fast that water must be able to leave — and the check is easy to get wrong on a modification.">
+<meta property="og:title" content="Bulwarks, wells and freeing ports under ICLL">
+<meta property="og:description" content="Raise a bulwark and you create a well that can trap green water. The Load Line Convention sets how fast that water must be able to leave — and the check is easy to get wrong on a modification.">
+<meta property="og:type" content="article">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230B1520'/%3E%3Cpath d='M12 38h40l-5 10H17z' fill='none' stroke='%23F7F7F4' stroke-width='3'/%3E%3Cpath d='M8 42h48' stroke='%236FA8DC' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/article.css">
+</head>
+<body>
+<header class="nav"><div class="nav-in">
+  <a class="brand" href="../"><span class="brand-mark" aria-hidden="true">TA</span>Tamizharuvi M. A.</a>
+  <a class="back" href="../#insights">← All notes</a>
+</div></header>
+<main>
+<article>
+  <span class="kicker">Load Line</span>
+  <h1>Bulwarks, wells and freeing ports under ICLL</h1>
+  <p class="dek">Raise a bulwark and you create a well that can trap green water. The Load Line Convention sets how fast that water must be able to leave — and the check is easy to get wrong on a modification.</p>
+  <div class="byline"><span>Tamizharuvi Maniyan Annamalai · Lead Naval Architect</span><span>5 min read</span></div>
+
+  <h2>Why it matters</h2>
+  <p>Water shipped on deck and held by bulwarks adds weight high up and a large free surface. Regulation 24 of the International Convention on Load Lines (ICLL) requires wells formed by bulwarks on weather decks to have enough <strong>freeing port area</strong> to clear that water quickly.</p>
+  <p>On a modification — new high bulwarks for pilot access, a deck reconfiguration, a closed-in working area — the freeing arrangement has to be re-evaluated, and the loadline plan updated to match.</p>
+
+  <h2>The basic requirement</h2>
+  <p>For each well on each side of the freeboard deck (with standard sheer or more), the minimum freeing port area A depends on the length of bulwark <em>l</em> forming the well:</p>
+  <div class="eq">l ≤ 20 m : A = 0.7 + 0.035 · l   (m²)<br>l &gt; 20 m : A = 0.07 · l   (m²)
+    <small>l need not be taken greater than 0.7 L. Wells on superstructure decks need half these areas.</small></div>
+  <p>Bulwark height adjusts the figure. Where the average height is above 1.2 m, the area increases by 0.004 m² per metre of well length for each 0.1 m of extra height; below 0.9 m it may be reduced on the same basis.</p>
+
+  <figure>
+    <svg viewBox="0 0 640 300" role="img" aria-label="Chart of minimum freeing port area against well length: 0.7 plus 0.035 l up to 20 metres, then 0.07 l">
+      <line x1="60" y1="250" x2="610" y2="250" stroke="#0B1520" stroke-width="1"/>
+      <line x1="60" y1="30" x2="60" y2="250" stroke="#0B1520" stroke-width="1"/>
+      <g font-family="IBM Plex Mono, monospace" font-size="11" fill="#5B6772">
+        <text x="56" y="268" text-anchor="middle">0</text>
+        <text x="193" y="268" text-anchor="middle">10</text>
+        <text x="335" y="268" text-anchor="middle">20</text>
+        <text x="472" y="268" text-anchor="middle">30</text>
+        <text x="600" y="268" text-anchor="middle">40 m</text>
+        <text x="50" y="254" text-anchor="end">0</text>
+        <text x="50" y="164" text-anchor="end">1.5</text>
+        <text x="50" y="74" text-anchor="end">3.0</text>
+        <text x="66" y="40">A (m²)</text>
+      </g>
+      <line x1="60" y1="160" x2="610" y2="160" stroke="#D9DCD5"/>
+      <line x1="60" y1="70" x2="610" y2="70" stroke="#D9DCD5"/>
+      <line x1="335" y1="30" x2="335" y2="250" stroke="#D9DCD5" stroke-dasharray="4 4"/>
+      <path d="M60 208 L335 166 L610 82" fill="none" stroke="#0B4F8A" stroke-width="2.5"/>
+      <text x="200" y="172" font-family="IBM Plex Mono, monospace" font-size="11" fill="#0B4F8A">0.7 + 0.035 l</text>
+      <text x="470" y="108" font-family="IBM Plex Mono, monospace" font-size="11" fill="#0B4F8A">0.07 l</text>
+    </svg>
+    <figcaption>Fig. 1 — Minimum freeing port area per side for a freeboard-deck well, before height corrections.</figcaption>
+  </figure>
+
+  <h2>Arrangement, not just area</h2>
+  <ul>
+    <li>Lower edges of freeing ports should be <strong>as near the deck as practicable</strong>.</li>
+    <li>Two-thirds of the required area should be in the half of the well nearest the <strong>lowest point of the sheer</strong>.</li>
+    <li>Openings are protected by rails or bars at about 230 mm spacing.</li>
+    <li><strong>Hinged shutters</strong> need ample clearance so they cannot jam, hinge pins or bearings of non-corrodible material, and nothing that would hold them shut.</li>
+  </ul>
+
+  <h2>Pitfalls on modifications</h2>
+  <ul>
+    <li><strong>New wells.</strong> A new section of high bulwark can split an existing well or create a new one, each needing its own check.</li>
+    <li><strong>Lost area.</strong> Platforms, walkways, pipe runs and equipment foundations placed in front of freeing ports reduce effective area.</li>
+    <li><strong>Access openings.</strong> Pilot or gangway openings in a bulwark change the arrangement — whether they count as freeing area depends on their form and the flag’s interpretation.</li>
+    <li><strong>Paperwork.</strong> The loadline plan and stability documentation must reflect the as-modified arrangement before the next survey.</li>
+  </ul>
+
+  <div class="note">Use the current text of the Convention and its unified interpretations, and confirm with the flag administration and class. Details such as trunks, hatchways and superstructure gaps have their own provisions.</div>
+
+  <div class="end">
+    <a href="../#insights">← Back to all notes</a>
+    <a href="../#contact">Discuss a project →</a>
+  </div>
+</article>
+</main>
+<footer>© 2026 Tamizharuvi Maniyan Annamalai · hiaruvi.com</footer>
+</body>
+</html>
