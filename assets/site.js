@@ -42,22 +42,30 @@
   function go(i,fromHash){
     if(i<0||i>=secs.length||i===idx)return;
     idx=i;lock=true;paint();
+    dispatchEvent(new CustomEvent('sectionchange',{detail:{id:secs[i].id,idx:i}}));
     if(secs[i].id&&!fromHash)history.replaceState(null,'','#'+secs[i].id);
     secs[i].scrollTop=0;
     setTimeout(function(){lock=false},reduce?60:900);
   }
   function mode(){html.classList.toggle('paged',wide.matches);paint()}
+  setTimeout(function(){dispatchEvent(new CustomEvent('sectionchange',{detail:{id:secs[idx].id,idx:idx}}))},50);
   mode();wide.addEventListener('change',mode);
   requestAnimationFrame(function(){requestAnimationFrame(function(){html.classList.add('ready')})});
 
   function edges(){var s=secs[idx];return{top:s.scrollTop<=0,bot:s.scrollTop+s.clientHeight>=s.scrollHeight-2}}
+  /* one wheel or trackpad gesture moves exactly one section:
+     a gesture is a stream of wheel events without a 220 ms pause */
+  var lastWheel=0,used=false;
   deck.addEventListener('wheel',function(e){
     if(!wide.matches)return;
+    var now=performance.now(),gap=now-lastWheel;lastWheel=now;
+    if(gap>220){used=false;acc=0}
     var ed=edges();
-    if((e.deltaY>0&&!ed.bot)||(e.deltaY<0&&!ed.top))return;
-    e.preventDefault();if(lock)return;
-    acc+=e.deltaY;if(Math.abs(acc)<30)return;
-    go(idx+(acc>0?1:-1));acc=0;
+    if(!used&&((e.deltaY>0&&!ed.bot)||(e.deltaY<0&&!ed.top)))return;   // let tall sections scroll first
+    e.preventDefault();
+    if(used||lock)return;
+    acc+=e.deltaY;if(Math.abs(acc)<25)return;
+    used=true;go(idx+(acc>0?1:-1));acc=0;
   },{passive:false});
   var ty=null;
   deck.addEventListener('touchstart',function(e){ty=e.touches[0].clientY},{passive:true});
