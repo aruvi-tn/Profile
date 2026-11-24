@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heavy-Lift Demo | Tamizharuvi Maniyan Annamalai</title>
+<meta name="description" content="A simplified heavy-lift stability demo based on the CyberMaster3D module designed by Tamizharuvi Maniyan Annamalai.">
+<meta name="theme-color" content="#F4F6F7">
+<meta property="og:title" content="Heavy-Lift Demo | Tamizharuvi Maniyan Annamalai">
+<meta property="og:description" content="A simplified heavy-lift stability demo based on the CyberMaster3D module designed by Tamizharuvi Maniyan Annamalai.">
+<meta property="og:image" content="https://www.hiaruvi.com/img/profile-640.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2313212C'/%3E%3Cpath d='M14 26h36v10c0 6-4 10-10 10H24c-6 0-10-4-10-10z' fill='none' stroke='%239CC6DD' stroke-width='3'/%3E%3Cpath d='M10 36h44' stroke='%23F4F6F7' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to Content</a>
+<div class="bg" aria-hidden="true"><img src="img/lines/iso-full-above.png" alt="" onerror="this.remove()"></div>
+<header class="top"><div class="wrap">
+  <a class="me" href="index.html"><b>Tamizharuvi Maniyan Annamalai</b><span>Naval Architect and Marine Digital Technologist</span></a>
+  <nav aria-label="Main"><ul class="menu"><li><a href="index.html">Home</a></li><li><a href="digital.html" aria-current="page">Digital Technology</a></li><li><a href="research.html">Research</a></li><li><a href="engineering.html">Engineering</a></li><li><a href="about.html">About</a></li></ul></nav>
+  <div class="right">
+    <a class="btn" href="Tamizharuvi_CV.pdf" download><span class="lbl">Download CV</span><svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M8 2v9M4 7l4 4 4-4M2.5 14h11"/></svg></a>
+    <button class="burger" type="button" aria-label="Menu" aria-expanded="false"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 5h14M2 9h14M2 13h14"/></svg></button>
+  </div>
+</div></header>
+<div class="drawer"><ul><li><a href="index.html">Home</a></li><li><a href="digital.html" aria-current="page">Digital Technology</a></li><li><a href="research.html">Research</a></li><li><a href="engineering.html">Engineering</a></li><li><a href="about.html">About</a></li></ul></div>
+<main id="main" class="deck">
+<section class="sec" id="demo" data-label="Demo" aria-label="Demo"><div class="sec-in"><div class="sec-head"><div class="eyebrow">Try It</div><h1 class="title">Heavy-Lift Demo</h1><p class="lead">Move the load and outreach, then counter-ballast and see what happens if the load is lost.</p></div>
+<div class="demo">
+  <div class="card stage" style="padding:14px"><svg viewBox="0 0 640 420" role="img" aria-labelledby="dt dd">
+<title id="dt">Crane vessel cross-section</title><desc id="dd">A midship section of a crane vessel that heels as the crane lifts a load over the side.</desc>
+<defs><clipPath id="sea"><rect x="0" y="262" width="640" height="200"/></clipPath>
+<path id="hull" d="M196 214 H444 L446 300 Q446 338 410 340 H230 Q194 338 194 300 Z"/></defs>
+<rect x="0" y="262" width="640" height="160" fill="#D6E6EE"/>
+<path d="M0 262 Q40 256 80 262 T160 262 T240 262 T320 262 T400 262 T480 262 T560 262 T640 262" fill="none" stroke="#7FB0CF" stroke-width="2"/>
+<g id="g1"><use href="#hull" fill="#13212C"/></g>
+<g clip-path="url(#sea)"><g id="g2"><use href="#hull" fill="#9E3B2C"/></g></g>
+<g id="g3">
+  <rect x="190" y="206" width="260" height="10" rx="3" fill="#13212C"/>
+  <rect x="210" y="170" width="70" height="36" rx="6" fill="#2A3D4C"/>
+  <rect x="218" y="178" width="54" height="8" rx="3" fill="#9CC6DD"/>
+  <rect x="212" y="300" width="44" height="22" rx="5" fill="none" stroke="#E7EEF2" stroke-width="2" opacity=".8"/>
+  <rect id="tank" x="214" y="320" width="40" height="0" rx="3" fill="#7FB0CF"/>
+  <rect x="384" y="300" width="44" height="22" rx="5" fill="none" stroke="#E7EEF2" stroke-width="2" opacity=".8"/>
+  <line x1="320" y1="190" x2="320" y2="346" stroke="#E7EEF2" stroke-dasharray="4 5" opacity=".5"/>
+  <path d="M402 206 L412 150 H428 L438 206 Z" fill="#2A3D4C"/>
+  <path id="boom" d="" fill="#13212C"/>
+  <line id="wire" stroke="#13212C" stroke-width="1.6"/>
+  <g id="load"><rect width="44" height="30" rx="4" fill="#C0533F"/><rect x="4" y="4" width="36" height="22" rx="3" fill="none" stroke="#E9A89C" stroke-width="1.5"/></g>
+</g>
+<line x1="320" y1="120" x2="320" y2="380" stroke="#4A5965" stroke-width="1" stroke-dasharray="2 5"/>
+</svg></div>
+  <div class="card">
+    <div class="readout" aria-live="polite"><div id="hb"><b id="heel">0.0°</b><span id="side">Heel</span></div><div><b id="gm">3.00 m</b><span>Effective GM</span></div><div><b id="bo">0 t</b><span>Port Ballast</span></div></div>
+    <div class="ctl"><label for="w">Load <output id="wo">250 t</output></label><input id="w" type="range" min="0" max="400" step="10" value="250"></div>
+    <div class="ctl"><label for="r">Outreach from Centreline <output id="ro">24 m</output></label><input id="r" type="range" min="14" max="30" step="1" value="24"></div>
+    <div class="toggles"><button class="toggle" id="bal" type="button" aria-pressed="false">Counter-Ballast</button><button class="toggle danger" id="drop" type="button" aria-pressed="false">Lose the Load</button></div>
+    <p class="status" id="st" role="status"></p>
+    <a class="go" href="digital.html#heavy-lift" style="margin-top:6px">Back to Heavy Lift<svg class="ico arw" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+  </div>
+</div></div></section>
+<section class="sec" id="how" data-label="How It Works" aria-label="How It Works"><div class="sec-in"><div class="sec-head"><div class="eyebrow">Behind the Demo</div><h2 class="title">How the Real Module Works</h2></div>
+<div class="grid3">
+  <div class="card"><h3>Pick the Crane and Load Chart</h3><p>The operator selects the crane and its load chart, the cargo and the lift type, at sea or in harbour.</p></div>
+  <div class="card"><h3>Check Before Lifting</h3><p>Stability is recomputed with the cargo on the hook. If heel or trim is outside the limits, anti-heeling fills tanks to bring them back.</p></div>
+  <div class="card"><h3>Plan for Loss of Load</h3><p>The sudden-loss-of-load case is checked against the counter-ballast, with live draft and tank readings from the vessel.</p></div>
+</div>
+<p class="also" style="margin-top:18px">This page uses a simplified illustrative vessel: 12,000 t displacement, GM 3.0 m, wall-sided small-angle method.</p><footer class="foot">
+  <div><b>Tamizharuvi Maniyan Annamalai</b><span class="k">Lead Naval Architect &amp; Assistant Manager, Marine Technology, Cybermarine Ltd</span></div>
+  <div><span class="k">Email</span><a href="mailto:tamizharuvi_a@cybermarine.org">tamizharuvi_a@cybermarine.org</a></div>
+  <div><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/aruvi-in/" rel="noopener">linkedin.com/in/aruvi-in</a></div>
+  <a class="btn" href="Tamizharuvi_CV.pdf" download>Download CV<svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M8 2v9M4 7l4 4 4-4M2.5 14h11"/></svg></a>
+</footer></div></section>
+</main>
+<div class="dots" aria-label="Sections"><button class="arrow prev" type="button" aria-label="Previous Section"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 13V3M4 7l4-4 4 4"/></svg></button><ol></ol><button class="arrow next" type="button" aria-label="Next Section"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 3v10M4 9l4 4 4-4"/></svg></button></div>
+<button class="totop" type="button" aria-label="Back to Top"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 13V3M4 7l4-4 4 4"/></svg></button>
+<script src="assets/site.js"></script>
+<script>
+(function(){
+var D=12000,GM0=3.0,KG=8,TANK=12,S=8,CX=320,WL=262,PX=420,PY=152,BOOM=30;
+var w=document.getElementById('w'),r=document.getElementById('r'),bal=document.getElementById('bal'),drop=document.getElementById('drop');
+var g1=document.getElementById('g1'),g2=document.getElementById('g2'),g3=document.getElementById('g3'),boom=document.getElementById('boom'),wire=document.getElementById('wire'),load=document.getElementById('load'),tank=document.getElementById('tank');
+var hO=document.getElementById('heel'),gO=document.getElementById('gm'),bO=document.getElementById('bo'),hb=document.getElementById('hb'),st=document.getElementById('st');
+var ballast=0,dropped=false,shown=0,target=0,raf=0,reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function geo(R){var hz=Math.max(1,R-12.5),vt=Math.sqrt(BOOM*BOOM-hz*hz),tx=PX+hz*S,ty=PY-vt*S;
+ var nx=-(ty-PY),ny=(tx-PX),l=Math.hypot(nx,ny);nx/=l;ny/=l;
+ boom.setAttribute('d','M'+(PX+nx*6)+' '+(PY+ny*6)+' L'+(tx+nx*2)+' '+(ty+ny*2)+' L'+(tx-nx*2)+' '+(ty-ny*2)+' L'+(PX-nx*6)+' '+(PY-ny*6)+' Z');
+ var hy=Math.min(ty+12*S,176);wire.setAttribute('x1',tx);wire.setAttribute('y1',ty);wire.setAttribute('x2',tx);wire.setAttribute('y2',hy);
+ load.setAttribute('transform','translate('+(tx-22)+' '+hy+')');return 18+vt}
+function calc(){var W=dropped?0:+w.value,R=+r.value;document.getElementById('wo').textContent=w.value+' t';document.getElementById('ro').textContent=R+' m';
+ var z=geo(R);load.style.display=wire.style.display=dropped?'none':'';
+ var disp=D+W+ballast,gm=GM0-W*(z-KG)/disp,mom=W*R-ballast*TANK,heel=Math.atan(mom/(disp*Math.max(gm,.05)))*180/Math.PI;target=heel;
+ gO.textContent=gm.toFixed(2)+' m';bO.textContent=Math.round(ballast)+' t';var f=Math.min(18,ballast/40);tank.setAttribute('height',f);tank.setAttribute('y',320-f);
+ var a=Math.abs(heel);hO.textContent=a.toFixed(1)+'°';document.getElementById('side').textContent=a>=.05?(heel>0?'Heel to Starboard':'Heel to Port'):'Heel';hb.className=a>5?'warn':'';
+ if(dropped&&ballast>0){st.textContent='The load is gone but the ballast stays in the port tank, so the ship heels the other way. The real module checks this before the lift.';st.className='status bad'}
+ else if(a>5){st.textContent='More than 5° of heel. Counter-ballast before lifting.';st.className='status bad'}
+ else if(ballast>0){st.textContent='Counter-ballast balances the lift.';st.className='status'}else{st.textContent='';st.className='status'}
+ anim()}
+function draw(){var t='rotate('+shown.toFixed(2)+' '+CX+' '+WL+')';g1.setAttribute('transform',t);g2.setAttribute('transform',t);g3.setAttribute('transform',t)}
+function anim(){if(reduce){shown=target;draw();return}if(raf)return;(function s(){var d=target-shown;if(Math.abs(d)<.02){shown=target;draw();raf=0;return}shown+=d*.1;draw();raf=requestAnimationFrame(s)})()}
+function rb(){if(bal.getAttribute('aria-pressed')==='true')ballast=(+w.value)*(+r.value)/TANK}
+w.addEventListener('input',function(){rb();calc()});r.addEventListener('input',function(){rb();calc()});
+bal.addEventListener('click',function(){var on=bal.getAttribute('aria-pressed')!=='true';bal.setAttribute('aria-pressed',on);ballast=on?(+w.value)*(+r.value)/TANK:0;if(!on&&dropped){dropped=false;drop.setAttribute('aria-pressed','false');drop.textContent='Lose the Load'}calc()});
+drop.addEventListener('click',function(){dropped=!dropped;drop.setAttribute('aria-pressed',dropped);drop.textContent=dropped?'Reset the Load':'Lose the Load';calc()});
+calc()})();
+</script>
+</body>
+</html>
